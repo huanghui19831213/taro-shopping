@@ -1,0 +1,38 @@
+.essentialInfo{
+  background:#fff;
+  .oUl{
+    padding-bottom:20rpx;
+  }
+  .oLi{
+    padding:12rpx 20rpx;
+    display:flex;
+    align-items: center;
+    flex:1;
+    &:not(:last-child){
+      border-bottom:1px solid #ddd
+    }
+  }
+  .left{
+    height:60rpx;
+    line-height:60rpx;
+    width:60rpx;
+    text-align:center;
+    background:#333;
+    border-radius:50%;
+    color:#fff;
+  }
+  .right{
+    width:80rpx;
+    color:#666;
+  }
+  .content{
+    flex:1;
+    margin-left:20rpx;
+    margin-right:10rpx;
+  }
+  .username +text{
+    color:#666;
+    padding-left:10rpx;
+    font-size:26rpx;
+  }
+}

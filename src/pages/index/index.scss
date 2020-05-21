@@ -1,0 +1,41 @@
+.index{
+  .oUl{
+    padding-top:8rpx;
+    box-sizing:border-box;
+  }
+  .oLi{
+    width:50%;
+    box-sizing:border-box;
+    overflow:hidden;
+    display:inline-block;
+    &:nth-child(2n+1){
+      padding-right:6px;
+    }
+    &:nth-child(2n+2){
+      padding-left:6rpx;
+    }
+  }
+  
+  .oImg{
+    width:100% !important;
+  }
+  .oDiv{
+    padding:12rpx;
+    background:#fff;
+  }
+  .price,.Num{
+    display:inline-block;
+  }
+  .price{
+    padding-right:10rpx;
+    color:red;
+  }
+  text{
+    display:inline-block;
+    padding-bottom:6rpx;
+  }
+  .Num{
+    color:#666;
+    font-size:26rpx;
+  }
+}
