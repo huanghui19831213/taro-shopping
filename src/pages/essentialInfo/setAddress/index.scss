@@ -1,0 +1,26 @@
+.addressInfo{
+  background:#fff;
+  height:100%;
+  .oLi{
+    padding:20rpx 30rpx;
+    border-bottom:1px solid #ddd;
+    display:flex;
+    align-items: center;
+    >text{
+      display:inline-block;
+      width:180px;
+    }
+    input{flex:1}
+  }
+  .quxian{
+    padding-top:0px;
+    padding-bottom:0px;
+    view{
+      padding:0px;
+      border:0px;
+    }
+    .region-text{
+      width:100% !important;
+    }
+  }
+}

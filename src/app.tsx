@@ -26,7 +26,8 @@ class App extends Component {
       'pages/essentialInfo/index',
       'pages/login/index',
       'pages/index/index',
-      'pages/productDetail/index'
+      'pages/productDetail/index',
+      'pages/essentialInfo/setAddress/index',
     ],
     window: {
       backgroundTextStyle: 'light',

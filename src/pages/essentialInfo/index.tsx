@@ -8,6 +8,11 @@ export default class EssentialInfo extends Component<any,any>{
   config: Config = {
     navigationBarTitleText: '我的收货地址'
   }
+  editor(){
+    Taro.navigateTo({
+      'url':'/pages/essentialInfo/setAddress/index'
+    })
+  }
   render(){
     return(
       <View className='essentialInfo'>
@@ -24,7 +29,7 @@ export default class EssentialInfo extends Component<any,any>{
                   <Text className='f26'>上海上海市闵行区金平路丽都城113号203</Text>
                 </View>
               </View>
-              <Text className='right'>
+              <Text className='right' onClick={this.editor.bind(this)}>
                 | 编辑
               </Text>
             </View>
