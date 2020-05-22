@@ -1,14 +1,30 @@
-import Taro, { Component, Config } from '@tarojs/taro'
-import { View, Text,Image  } from '@tarojs/components'
-import './index.scss'
+
 import namedPng from '@static/image/pic1.jpg'
 import namedPng2 from '@static/image/pic2.jpg'
 
-export default class Index extends Component {
-  componentDidMount () {
-    
+import Taro, { Component, Config } from '@tarojs/taro'
+import { connect } from '@tarojs/redux'
+import { View, Text,Image  } from '@tarojs/components'
+import './index.scss'
+
+type PageStateProps = {
+  user: {
+        username:string,
+        password:string
   }
+}
+interface Index {
+  props: PageStateProps;
+}
+@connect(({ user }) => ({
+  user
+}))
+export default class Index extends Component<PageStateProps> {
   componentWillMount () { }
+  componentDidMount () {
+      console.log(this.props.user,2222)
+  }
+  componentWillUnmount () { }
   /**
    * 指定config的类型声明为: Taro.Config
    *
@@ -19,7 +35,6 @@ export default class Index extends Component {
   config: Config = {
     navigationBarTitleText: '首页'
   }
-  componentWillUnmount () { }
 
   componentDidShow () { }
 

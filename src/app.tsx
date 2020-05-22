@@ -1,8 +1,12 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import Index from './pages/index'
 import './app.scss'
+import { Provider } from '@tarojs/redux'
 
+import configStore from './store'
 import '@static/iconfont/iconfont.css';
+
+const store = configStore()
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
@@ -23,8 +27,8 @@ class App extends Component {
    */
   config: Config = {
     pages: [
-      'pages/essentialInfo/index',
       'pages/login/index',
+      'pages/essentialInfo/index',
       'pages/index/index',
       'pages/productDetail/index',
       'pages/essentialInfo/setAddress/index',
@@ -48,7 +52,9 @@ class App extends Component {
   // 请勿修改此函数
   render () {
     return (
-      <Index />
+      <Provider store={store}>
+        <Index />
+      </Provider>
     )
   }
 }
