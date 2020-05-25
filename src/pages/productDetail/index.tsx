@@ -31,10 +31,10 @@ class productDetail extends Component<any, any> {
       isShow: !this.state.isShow,
     });
   }
-  handlerClickGuige(e){
+  handleCancelClick(e){
     console.log(e)
     this.setState({
-      isShow:e
+      isShow:false
     })
   }
   render() {
@@ -108,7 +108,7 @@ class productDetail extends Component<any, any> {
         </View>
         
         <View className={classNames('dialog', this.state.isShow  && 'dialog-visible')}>
-          <Guige onGuige={this.handlerClickGuige.bind(this)}></Guige>
+          <Guige onGuige={this.handleCancelClick.bind(this)}></Guige>
         </View>
       </View>
     );
