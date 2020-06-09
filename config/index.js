@@ -14,6 +14,10 @@ const config = {
   alias: {
     '@static': path.resolve(__dirname, '..', 'src/static')
   },
+  
+  mini: {
+    commonChunks: ['runtime', 'vendors', 'taro', 'common']
+  },
   plugins: {
     babel: {
       sourceMap: true,
@@ -34,6 +38,19 @@ const config = {
       resource: [
         path.resolve(__dirname, '..', 'src/app.scss')
       ]
+    },
+
+    uglify: {
+      enable: true,
+      config: {
+        // 配置项同 https://github.com/mishoo/UglifyJS2#minify-options
+      }
+    },
+    csso: {
+      enable: true,
+      config: {
+        // 配置项同 https://github.com/css/csso#minifysource-options
+      }
     }
   },
   defineConstants: {
@@ -42,11 +59,19 @@ const config = {
     patterns: [
     ],
     options: {
+      ignore: ['*.tsx', '*.scss']
     }
   },
   weapp: {
     module: {
       postcss: {
+        cssModules: {
+          enable: true, // 默认为 false，如需使用 css modules 功能，则设为 true
+          config: {
+            namingPattern: 'module', // 转换模式，取值为 global/module，下文详细说明
+            generateScopedName: '[name]__[local]___[hash:base64:5]'
+          }
+        },
         autoprefixer: {
           enable: true,
           config: {
@@ -77,7 +102,8 @@ const config = {
           }
         }
       }
-    }
+    },
+    
   },
   h5: {
     publicPath: '/',
@@ -108,6 +134,7 @@ const config = {
 
 module.exports = function (merge) {
   if (process.env.NODE_ENV === 'development') {
+    console.log(merge({}, config, require('./dev')))
     return merge({}, config, require('./dev'))
   }
   return merge({}, config, require('./prod'))

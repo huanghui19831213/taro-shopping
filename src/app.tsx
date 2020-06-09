@@ -1,10 +1,10 @@
 import Taro, { Component, Config } from '@tarojs/taro'
-import Index from './pages/index'
-import './app.scss'
 import { Provider } from '@tarojs/redux'
+import Index from './pages/index/index'
+import './app.scss'
 
 import configStore from './store'
-import '@static/iconfont/iconfont.css';
+import './static/iconfont/iconfont.css';
 
 const store = configStore()
 
@@ -14,7 +14,7 @@ const store = configStore()
 //   require('nerv-devtools')
 // }
 
-class App extends Component {
+class App extends Component <any,any>{
 
   componentDidMount () {}
 
@@ -32,6 +32,7 @@ class App extends Component {
       'pages/index/index',
       'pages/productDetail/index',
       'pages/essentialInfo/setAddress/index',
+      'pages/getUser',
     ],
     window: {
       backgroundTextStyle: 'light',

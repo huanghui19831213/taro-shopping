@@ -1,8 +1,10 @@
-import Taro, { Component } from '@tarojs/taro'
-import { Text,Image,View,Button } from '@tarojs/components'
-import './guige.scss'
+
 import pic1 from "@static/image/pic1.jpg";
 import classNames from 'classnames';
+import Taro, { Component } from '@tarojs/taro'
+import { AtInputNumber } from 'taro-ui'
+import { Text,Image,View,Button } from '@tarojs/components'
+import './guige.scss'
 
 export default class Guige extends Component<any,any> {
   constructor() {
@@ -18,6 +20,9 @@ export default class Guige extends Component<any,any> {
     this.setState({
       active:e
     })
+  }
+  handleChange(e){
+    console.log(e)
   }
   render () {
     const {active} =this.state;
@@ -39,8 +44,17 @@ export default class Guige extends Component<any,any> {
               <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text>
             </View>
           </View>
-          <View  className='plr30'>
+          <View  className='plr30 overflow'>
             <Text>数量</Text>
+            <View className='kucun'>
+              <AtInputNumber
+                min={0}
+                max={100}
+                step={1}
+                value={this.state.value}
+                onChange={this.handleChange.bind(this)}
+              />
+            </View>
           </View>
         </View>
         <Button onClick={this.handlerClick.bind(this,false)}>确定</Button>

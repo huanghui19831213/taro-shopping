@@ -1,11 +1,10 @@
-import Taro, { Component, Config } from "@tarojs/taro";
-import "./index.scss";
-import classNames from "classnames";
+
 import pic1 from "@static/image/pic1.jpg";
 import pic2 from "@static/image/pic2.jpg";
 import pic4 from "@static/image/pic4.webp";
 import pic5 from "@static/image/pic5.webp";
 import pic6 from "@static/image/pic6.webp";
+import classNames from "classnames";
 import {
   View,
   Swiper,
@@ -14,6 +13,8 @@ import {
   Text,
   Button,
 } from "@tarojs/components";
+import Taro, { Component, Config } from "@tarojs/taro";
+import "./index.scss";
 import Guige from "./guige/guige";
 
 class productDetail extends Component<any, any> {

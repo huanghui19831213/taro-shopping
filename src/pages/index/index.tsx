@@ -2,7 +2,7 @@
 import namedPng from '@static/image/pic1.jpg'
 import namedPng2 from '@static/image/pic2.jpg'
 
-import Taro, { Component, Config } from '@tarojs/taro'
+import Taro, { Component } from '@tarojs/taro'
 import { connect } from '@tarojs/redux'
 import { View, Text,Image  } from '@tarojs/components'
 import './index.scss'
@@ -19,10 +19,9 @@ interface Index {
 @connect(({ user }) => ({
   user
 }))
-export default class Index extends Component<PageStateProps> {
+class Index extends Component<PageStateProps> {
   componentWillMount () { }
   componentDidMount () {
-      console.log(this.props.user,2222)
   }
   componentWillUnmount () { }
   /**
@@ -32,17 +31,23 @@ export default class Index extends Component<PageStateProps> {
    * 对于像 navigationBarTextStyle: 'black' 这样的推导出的类型是 string
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
-  config: Config = {
+  config = {
     navigationBarTitleText: '首页'
   }
 
-  componentDidShow () { }
+  componentDidShow () { 
+  }
 
   componentDidHide () { }
 
   getProductDetail(){
     Taro.navigateTo({
       url: '/pages/productDetail/index',
+    })
+  }
+  getUserInfo(){
+    Taro.navigateTo({
+      url: '/pages/getUser',
     })
   }
   render () {
@@ -60,7 +65,7 @@ export default class Index extends Component<PageStateProps> {
             </View>
           </View>
           <View className='oLi'>
-            <View className='oDiv'>
+            <View className='oDiv' onClick={()=>this.getUserInfo()}>
                 <Image src={namedPng2} className='oImg'></Image>
                   <Text>实木玄关桌门厅隔断装饰老榆木条案供台简约现代家具新中式玄关柜</Text>
                   <View>
@@ -129,3 +134,4 @@ export default class Index extends Component<PageStateProps> {
     )
   }
 }
+export default Index

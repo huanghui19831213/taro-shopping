@@ -1,16 +1,15 @@
 
 import { View } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
-import Taro, { Component, Config } from '@tarojs/taro'
+import Taro, { Component } from '@tarojs/taro'
 import { AtForm, AtInput, AtButton } from 'taro-ui'
-import Ajax from '@static/js/Ajax/http.js'
+import Ajax from '../../static/js/Ajax/http.js'
 import './index.scss'
-import {USERINFO} from '../../store/actionType'
 @connect(({ user }) => ({
   user
 }), (dispatch) => ({
   login (e) {
-    dispatch({type:USERINFO,data:e})
+    dispatch({type:'USERINFO',data:e})
   }
 }))
 export default class Login extends Component<any,any>{
@@ -21,7 +20,7 @@ export default class Login extends Component<any,any>{
       password:''
     }
   }
-  config: Config = {
+  config = {
     navigationBarTitleText: '用户登录'
   }
   onSubmit(){
