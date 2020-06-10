@@ -14,45 +14,55 @@ const config = {
   alias: {
     '@static': path.resolve(__dirname, '..', 'src/static')
   },
-  
-  mini: {
-    commonChunks: ['runtime', 'vendors', 'taro', 'common']
+  uglify: {
+    enable: true
   },
-  plugins: {
-    babel: {
-      sourceMap: true,
-      presets: [
-        ['env', {
-          modules: false
-        }]
-      ],
-      plugins: [
-        'transform-decorators-legacy',
-        'transform-class-properties',
-        'transform-object-rest-spread'
-      ]
-    },
-    
-    
-    sass: {
-      resource: [
-        path.resolve(__dirname, '..', 'src/app.scss')
-      ]
-    },
-
-    uglify: {
-      enable: true,
-      config: {
-        // 配置项同 https://github.com/mishoo/UglifyJS2#minify-options
-      }
-    },
-    csso: {
-      enable: true,
-      config: {
-        // 配置项同 https://github.com/css/csso#minifysource-options
+  csso: {
+    enable: true
+  },
+  mini: {
+    webpackChain (chain, webpack) {},
+    cssLoaderOption: {},
+    postcss: {
+      pxtransform: {
+        enable: true,
+        config: {}
+      },
+      url: {
+        enable: true,
+        config: {
+          limit: 10240 // 设定转换尺寸上限
+        }
       }
     }
   },
+  babel: {
+    sourceMap: true,
+    presets: [['env', { modules: false }]],
+    plugins: [
+      'transform-decorators-legacy',
+      'transform-class-properties',
+      'transform-object-rest-spread',
+      ['transform-runtime', {
+        "helpers": false,
+        "polyfill": false,
+        "regenerator": true,
+        "moduleName": 'babel-runtime'
+      }]
+    ]
+  },
+  
+  
+  sass: {
+    resource: [
+      path.resolve(__dirname, '..', 'src/app.scss')
+    ]
+  },
+
+  
+  // plugins: {
+    
+  // },
   defineConstants: {
   },
   copy: {
