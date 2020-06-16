@@ -13,7 +13,7 @@ import {
   Text,
   Button,
 } from "@tarojs/components";
-import Taro, { Component, Config } from "@tarojs/taro";
+import Taro, { Component } from "@tarojs/taro";
 import "./index.scss";
 import Guige from "./guige/guige";
 
@@ -24,7 +24,7 @@ class productDetail extends Component<any, any> {
       isShow: false,
     };
   }
-  config: Config = {
+  config = {
     navigationBarTitleText: "商品详细",
   }
   changeGuige() {

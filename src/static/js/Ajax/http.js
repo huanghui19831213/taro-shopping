@@ -8,6 +8,7 @@ class httpRequest {
   
   baseOptions(params, method = "GET") {
     let { url, data } = params;
+    console.log(url)
     const BASE_URL = getBaseUrl(url);
     let contentType = "application/json";
     contentType = params.contentType || contentType;

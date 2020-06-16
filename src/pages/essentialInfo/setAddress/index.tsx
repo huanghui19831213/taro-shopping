@@ -1,11 +1,11 @@
 
 import { View ,Text, Input} from '@tarojs/components'
-import Taro, { Component, Config } from '@tarojs/taro'
+import Taro, { Component } from '@tarojs/taro'
 import TaroRegionPicker from '../../../components/address_picker'
 import './index.scss'
 
 export default class SetAddress extends Component<any,any>{
-  config: Config = {
+  config = {
     navigationBarTitleText: '我的地址'
   }
   onGetRegion(e){

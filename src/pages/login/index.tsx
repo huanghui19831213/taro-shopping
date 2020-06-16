@@ -5,6 +5,8 @@ import Taro, { Component } from '@tarojs/taro'
 import { AtForm, AtInput, AtButton } from 'taro-ui'
 import Ajax from '../../static/js/Ajax/http.js'
 import './index.scss'
+
+
 @connect(({ user }) => ({
   user
 }), (dispatch) => ({
@@ -12,6 +14,7 @@ import './index.scss'
     dispatch({type:'USERINFO',data:e})
   }
 }))
+
 export default class Login extends Component<any,any>{
   constructor () {
     super(...arguments)
@@ -24,8 +27,11 @@ export default class Login extends Component<any,any>{
     navigationBarTitleText: '用户登录'
   }
   onSubmit(){
-    this.props.login({username:this.state.username,password:this.state.password})
-    Ajax.post('http://localhost:5050/api/3848',{data:2223})
+    this.props.dispatch({
+      type:'USERINFO',
+      data:{username:this.state.username,password:this.state.password}
+    })
+    Ajax.post('/api/weapp/GetCode2Session',{})
     Taro.navigateTo({
       url: '/pages/index/index'
     })

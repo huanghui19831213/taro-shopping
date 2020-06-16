@@ -9,8 +9,8 @@ import './index.scss'
 
 type PageStateProps = {
   user: {
-        username:string,
-        password:string
+    username:string,
+    password:string
   }
 }
 interface Index {

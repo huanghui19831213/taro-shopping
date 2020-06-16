@@ -1,11 +1,11 @@
 
 import { View,Text } from '@tarojs/components'
-import Taro, { Component, Config } from '@tarojs/taro'
+import Taro, { Component } from '@tarojs/taro'
 import { AtButton } from 'taro-ui'
 import './index.scss'
 
 export default class EssentialInfo extends Component<any,any>{
-  config: Config = {
+  config = {
     navigationBarTitleText: '我的收货地址'
   }
   editor(){
