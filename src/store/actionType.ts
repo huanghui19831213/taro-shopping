@@ -1,1 +1,2 @@
-export const USERINFO = 'USERINFO'
+const USERINFO = 'USERINFO'
+export default USERINFO

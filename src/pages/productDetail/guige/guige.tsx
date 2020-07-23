@@ -48,6 +48,7 @@ export default class Guige extends Component<any,any> {
             <Text>数量</Text>
             <View className='kucun'>
               <AtInputNumber
+                type='number'
                 min={0}
                 max={100}
                 step={1}
