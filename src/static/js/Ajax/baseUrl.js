@@ -21,6 +21,10 @@ const getBaseUrl = () => {
   // }
   if (types==='dev'){
     BASE_URL = 'https://dearbaapptest.ciicsh.com/webapisql/'
+  }else if (types==='test'){
+    BASE_URL = 'https://aaaaa.ciicsh.com/webapisql/'
+  }else if (types==='pro'){
+    BASE_URL = 'https://bbbb.ciicsh.com/webapisql/'
   }
   return BASE_URL
 }

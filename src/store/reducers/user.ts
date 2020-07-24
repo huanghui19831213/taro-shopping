@@ -7,7 +7,6 @@ const INITIAL_STATE = {
 
 export default function adduser (state = INITIAL_STATE, action) {
   
-  console.log(action,223)
   switch (action.type) {
     case USERINFO:
       return {
