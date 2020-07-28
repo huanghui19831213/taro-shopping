@@ -59,7 +59,7 @@ const config = {
   
   sass: {
     resource: [
-      path.resolve(__dirname, '..', 'src/app.scss')
+      path.resolve(__dirname, '..', 'src/static/css/index.scss')
     ]
   },
 

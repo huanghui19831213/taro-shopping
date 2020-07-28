@@ -1,6 +1,6 @@
 
 page{
-  background:#f0f0f0;
+  background:#fff;
   height:100%;
   color:#333;
   font-size:30rpx;
@@ -8,5 +8,15 @@ page{
 .f26{
   font-size:26rpx;
 }
+.fl{
+  float:left;
+}
+.fr{
+  float:right;
+}
+.overflow{
+  overflow:hidden
+}
 
 @import "~taro-ui/dist/style/index.scss"; 
+@import "./static/css/index.scss"; 

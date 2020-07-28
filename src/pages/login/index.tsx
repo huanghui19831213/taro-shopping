@@ -1,33 +1,12 @@
 
 import { View } from '@tarojs/components'
-import { connect } from '@tarojs/redux'
 import Taro, { Component } from '@tarojs/taro'
 import { AtForm, AtInput, AtButton } from 'taro-ui'
 import Ajax from '../../static/js/Ajax/http.js'
-import setUserInfo from '../../store/actions/user'
 import './index.scss'
+import {setGlobalData} from "../../static/js/utils"
 
-type PageStateProps = {
-  user: {
-    username: string,
-    password:string
-  }
-}
-type PageDispatchProps = {
-  onSetUserInfo: (e:any) => void
-}
 
-type IProps = PageStateProps & PageDispatchProps
-interface Login {
-  props: IProps;
-}
-@connect(({ user }) => ({
-  user
-}), (dispatch) => ({
-  onSetUserInfo (e) {
-    dispatch(setUserInfo(e))
-  }
-}))
  class Login extends Component<any,any>{
   constructor () {
     super(...arguments)
@@ -40,11 +19,11 @@ interface Login {
     navigationBarTitleText: '用户登录'
   }
   onSubmit(){
-    this.props.onSetUserInfo({username:this.state.username,password:this.state.password})
-    Ajax.post('/api/weapp/GetCode2Session',{})
+    //Ajax.post('/api/weapp/GetCode2Session',{})
     Taro.navigateTo({
       url: '/pages/index/index'
     })
+    setGlobalData("loginType", true)  
   }
   handleChange(key: any,value: any){
     this.setState({

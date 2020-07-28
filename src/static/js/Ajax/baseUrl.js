@@ -20,7 +20,7 @@ const getBaseUrl = () => {
   //   }
   // }
   if (types==='dev'){
-    BASE_URL = 'https://dearbaapptest.ciicsh.com/webapisql/'
+    BASE_URL = 'https://simesaas.ciicsh.org'
   }else if (types==='test'){
     BASE_URL = 'https://aaaaa.ciicsh.com/webapisql/'
   }else if (types==='pro'){

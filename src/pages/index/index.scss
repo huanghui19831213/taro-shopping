@@ -1,41 +1,152 @@
 .index{
-  .oUl{
-    padding-top:8rpx;
-    box-sizing:border-box;
+  padding-left:30rpx;
+  padding-right:30rpx;
+  .top{
+    position: relative;
+    .icon{
+      background:$color1;
+      width:36rpx;
+      text-align:center;
+      height:36rpx;
+      line-height:36rpx;
+      border-radius:50%;
+      color:#fff;
+      font-size:$iconSize;
+    }
+    .fl{
+      view,text{display:inline-block;}
+    }
+    .imgSwiper{
+      margin-top:28rpx;
+      border-radius:14rpx;
+      overflow:hidden;
+      image{
+        width:100%;
+      }
+    }
+    .activExplain{
+      position: absolute;
+      z-index:1000;
+      bottom:-20px;
+      right:-30px;
+      padding:6rpx 12rpx 0rpx 36rpx;
+      background:$color3;
+      color:#fff;
+      font-size:$iconSize2;
+      border-top-left-radius: 40rpx;
+      border-bottom-left-radius:40rpx;
+      view{
+        background:none;
+      }
+    }
   }
-  .oLi{
+  .oul>.title{
+    margin-top:60rpx;
+    margin-bottom:10rpx;
+    .fl {
+      .icon{
+        display:inline-block;
+        background:$color3;
+        margin-right:10rpx;
+        width:50rpx;
+        text-align:center;
+        height:50rpx;
+        line-height:50rpx;
+        color:#fff;
+        border-radius:10rpx;
+        font-size:$iconSize;
+      }
+      text{
+        color:$color3;
+        display:inline-block;
+        font-weight:bolder;
+      }
+      .xingyuan{
+        border:1px solid $color3;
+        font-size:$iconSize2;
+        padding-left:10rpx;
+        padding-right:10rpx;
+        border-radius:6rpx;
+        margin-left:20rpx;
+        font-weight:normal;
+      }
+    }
+    .fr{
+      .more{
+        background:$color3 !important;
+        color:#fff;
+        border:1rpx solid $color3;
+        border-radius:26rpx;
+        font-size:$iconSize2;
+        height: 46rpx;
+        line-height: 45rpx;
+        padding-right: 6rpx;
+        padding-left: 16rpx;
+      }
+      text{
+        font-size:$iconSize;
+      }
+    }
+  }
+  .oli{
+    padding-top:14rpx;
     width:50%;
-    box-sizing:border-box;
+    display:inline-block;
     overflow:hidden;
-    display:inline-block;
-    &:nth-child(2n+1){
-      padding-right:6px;
+    box-sizing: border-box;
+    image{
+      height:260rpx;
     }
-    &:nth-child(2n+2){
-      padding-left:6rpx;
+    &>view{
+      background:$color5;
+      border-radius:10rpx;
+      padding:40rpx 20rpx;
+    }
+    .title,.desc{
+      font-weight:bolder;
+      display:block;
+    }
+    .title{
+      color:#000;
+    }
+    .desc{
+      margin-top:10rpx;
+      color:$color6;
+      font-size:24rpx;
     }
   }
-  
-  .oImg{
-    width:100% !important;
+  .oul .oli:nth-child(2n+1){
+    padding-left:8rpx;
   }
-  .oDiv{
-    padding:12rpx;
-    background:#fff;
+  .oul .oli:nth-child(2n){
+    padding-right:8rpx;
   }
-  .price,.Num{
-    display:inline-block;
+  .imgDiv{
+    width:100%;
+    overflow: hidden;
+    text-align:center;
   }
-  .price{
-    padding-right:10rpx;
-    color:red;
+  .see{
+    height:38rpx;
+    line-height:38rpx;
+    background:$color1;
+    color:#fff;
+    border-radius:20rpx;
+    border:0px;
+    font-size:$iconSize3;
+    padding-left:4rpx;
+    padding-right:2rpx;
+    text{
+      font-size:$iconSize2
+    }
   }
-  text{
-    display:inline-block;
-    padding-bottom:6rpx;
-  }
-  .Num{
-    color:#666;
-    font-size:26rpx;
+  .content{
+    margin-top:20rpx;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    .fr{
+      width:80rpx;
+    }
   }
 }
