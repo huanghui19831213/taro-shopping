@@ -21,9 +21,10 @@ const config = {
     enable: true
   },
   mini: {
-    webpackChain (chain, webpack) {
+    webpackChain (chain) {
       if(process.env.ENV_TYPE==='test'){
-        chain.plugin('analyzer').use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin, [])
+        chain.plugin('analyzer')
+             .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin, [])
       }
     },
     cssLoaderOption: {},
@@ -63,12 +64,6 @@ const config = {
     ]
   },
 
-  
-  // plugins: {
-    
-  // },
-  defineConstants: {
-  },
   copy: {
     patterns: [
     ],

@@ -19,11 +19,13 @@ const getBaseUrl = () => {
   //     BASE_URL = ''
   //   }
   // }
+
+  console.log(process.env)
   if (types==='dev'){
     BASE_URL = 'https://simesaas.ciicsh.org'
   }else if (types==='test'){
     BASE_URL = 'https://aaaaa.ciicsh.com/webapisql/'
-  }else if (types==='pro'){
+  }else {
     BASE_URL = 'https://bbbb.ciicsh.com/webapisql/'
   }
   return BASE_URL

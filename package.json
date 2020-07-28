@@ -9,7 +9,7 @@
 		"css": "sass"
 	},
 	"scripts": {
-		"build": "cross-env ENV_TYPE=pro taro build --type weapp",
+		"build": "taro build --type weapp",
 		"start": "cross-env ENV_TYPE=dev npm run build -- --watch",
 		"test": "cross-env ENV_TYPE=test taro build --type weapp"
 	},
@@ -18,12 +18,9 @@
 	"dependencies": {
 		"@tarojs/components": "2.2.7",
 		"@tarojs/mobx": "2.2.7",
-		"@tarojs/redux": "2.2.7",
-		"@tarojs/redux-h5": "2.2.7",
 		"@tarojs/router": "2.2.7",
 		"@tarojs/taro": "2.2.7",
 		"@tarojs/taro-alipay": "2.2.7",
-		"@tarojs/taro-h5": "2.2.7",
 		"@tarojs/taro-qq": "2.2.7",
 		"@tarojs/taro-quickapp": "2.2.7",
 		"@tarojs/taro-swan": "2.2.7",
@@ -36,9 +33,6 @@
 		"nerv-devtools": "^1.5.7",
 		"nervjs": "^1.5.7",
 		"react": "^16.13.1",
-		"redux": "^4.0.5",
-		"redux-logger": "^3.0.6",
-		"redux-thunk": "^2.3.0",
 		"taro-ui": "^2.3.4"
 	},
 	"devDependencies": {

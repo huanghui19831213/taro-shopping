@@ -19,11 +19,11 @@ import {setGlobalData} from "../../static/js/utils"
     navigationBarTitleText: '用户登录'
   }
   onSubmit(){
-    //Ajax.post('/api/weapp/GetCode2Session',{})
-    Taro.navigateTo({
-      url: '/pages/index/index'
-    })
-    setGlobalData("loginType", true)  
+    Ajax.post('/api/weapp/GetCode2Session',{})
+    // Taro.navigateTo({
+    //   url: '/pages/index/index'
+    // })
+    // setGlobalData("loginType", true)  
   }
   handleChange(key: any,value: any){
     this.setState({

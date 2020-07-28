@@ -4,7 +4,6 @@ module.exports = {
   },
   defineConstants: {
     ENV_TYPES:process.env.ENV_TYPE
-    //
   },
   weapp: {},
   h5: {}
