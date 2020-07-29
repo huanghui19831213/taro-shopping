@@ -20,7 +20,7 @@ class Index extends Component<any,any> {
   }
 
   componentDidShow () { 
-    console.log(getGlobalData("loginType"))
+    console.log(getGlobalData("loginType"),1)
     Taro.getSetting({
       success(res) {
         console.log(res.authSetting["scope.userInfo"])

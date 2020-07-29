@@ -20,10 +20,10 @@ import {setGlobalData} from "../../static/js/utils"
   }
   onSubmit(){
     Ajax.post('/api/weapp/GetCode2Session',{})
-    // Taro.navigateTo({
-    //   url: '/pages/index/index'
-    // })
-    // setGlobalData("loginType", true)  
+    Taro.navigateTo({
+      url: '/pages/index/index'
+    })
+    setGlobalData("loginType", true)  
   }
   handleChange(key: any,value: any){
     this.setState({

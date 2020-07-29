@@ -143,7 +143,6 @@ const config = {
 
 module.exports = function (merge) {
   if (process.env.NODE_ENV === 'development') {
-    console.log(merge({}, config, require('./dev')))
     return merge({}, config, require('./dev'))
   }
   return merge({}, config, require('./prod'))
