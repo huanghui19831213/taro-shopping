@@ -9,9 +9,15 @@
 		"css": "sass"
 	},
 	"scripts": {
+<<<<<<< HEAD
 		"build:weapp": "taro build --type weapp",
 		"start": "cross-env ENV_TYPE=dev npm run build:weapp -- --watch",
 		"test:weapp": "cross-env ENV_TYPE=test taro build --type weapp"
+=======
+		"build": "cross-env ENV_TYPE=pro taro build --type weapp",
+		"start": "cross-env ENV_TYPE=dev npm run build -- --watch",
+		"test": "cross-env ENV_TYPE=test taro build --type weapp"
+>>>>>>> abec130b2f75c3b395755f39af26f2371e8f7f9b
 	},
 	"author": "",
 	"license": "MIT",

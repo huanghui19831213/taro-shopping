@@ -7,7 +7,10 @@ const INITIAL_STATE = {
 
 export default function adduser (state = INITIAL_STATE, action) {
   
+<<<<<<< HEAD
   console.log(action,223)
+=======
+>>>>>>> abec130b2f75c3b395755f39af26f2371e8f7f9b
   switch (action.type) {
     case USERINFO:
       return {

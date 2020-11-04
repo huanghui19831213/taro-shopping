@@ -28,7 +28,7 @@ export default class Guige extends Component<any,any> {
     const {active} =this.state;
     return (
       <View className='guige'>
-        <View>
+        <View className='guigeBody'>
           <View className='top'>
             <Image src={pic1} mode='widthFix'></Image>
             <View className='right'>
@@ -41,6 +41,41 @@ export default class Guige extends Component<any,any> {
             <View className='productType'>
               <Text onClick={this.setActive.bind(this,1)} className={classNames('text', active===1  && 'text-active')}>13框纯白款相框</Text>
               <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
+              <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text> <Text onClick={this.setActive.bind(this,2)} className={classNames('text', active===2  && 'text-active')}>13框纯黑款相框</Text>
               <Text onClick={this.setActive.bind(this,3)} className={classNames('text', active===3  && 'text-active')}>16框纯白款含2个椭圆相框</Text>
             </View>
           </View>

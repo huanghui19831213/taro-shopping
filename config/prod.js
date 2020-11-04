@@ -3,6 +3,7 @@ module.exports = {
     NODE_ENV: '"production"'
   },
   defineConstants: {
+    ENV_TYPES:process.env.ENV_TYPE
   },
   weapp: {},
   h5: {

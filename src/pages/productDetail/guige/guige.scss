@@ -2,6 +2,10 @@
   position:absolute;
   bottom :0px;
   height:88%;
+  .guigeBody{
+    height:100%;
+    overflow-y:auto;
+  }
   button{
     height:80rpx;
     line-height:80rpx;
