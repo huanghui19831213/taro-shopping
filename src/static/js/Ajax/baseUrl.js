@@ -1,4 +1,4 @@
-const getBaseUrl = (url) => {
+const getBaseUrl = () => {
   let BASE_URL = '';
   
   // eslint-disable-next-line no-undef

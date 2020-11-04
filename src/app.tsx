@@ -27,6 +27,7 @@ class App extends Component <any,any>{
    */
   config: Config = {
     pages: [
+      'pages/login/oindex',
       'pages/login/index',
       'pages/essentialInfo/index',
       'pages/index/index',
